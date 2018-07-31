@@ -12,52 +12,147 @@
         <h1 id="title">Survey Form</h1>
         <!-- form outer box -->
         <div id="form-box">
-            <p id="discription">Let us know how we can improve freeCodeCamp</p>
+            <p id="description">Let us know how we can improve freeCodeCamp</p>
             <!-- Form inner box -->
-            <div id="survey-form">
+            <form id="survey-form">
                 <!-- Name field -->
                 <div id="input-box">
                     <div id="labels">
-                        <label for="name">*Name:</label>
+                        <label for="name" id="name-label">*Name:</label>
                     </div>
                     <div id="input">
-                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
                 </div>
                 <!-- Email field -->
                 <div id="input-box">
                     <div id="labels">
-                        <label for="email-label">*Email:</label>
+                        <label for="email" id="email-label">*Email:</label>
                     </div>
                     <div id="input">
-                        <input type="email" id="email-label" name="email" placeholder="Enter your Email">
+                        <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                     </div>
                 </div>
+                <!-- Age field -->
                 <div id="input-box">
                     <div id="labels">
-                        <label for="age">*Age:</label>
+                        <label for="number" id="age-label">*Age:</label>
                     </div>
                     <div id="input">
-                        <input type="number" id="age" name="age" placeholder="Age" step="1" min="1" max="100">
+                        <input type="number" id="number" name="age" placeholder="Age" step="1" min="1" max="100">
                     </div>
                 </div>
+                <!-- Dropdow Opinion field 1 -->
                 <div id="input-box">
                     <div id="labels">
-                        <label for="age">Which option best describes your current role?</label>
+                        <label for="dropdown-role">Which option best describes your current role?</label>
                     </div>
                     <div id="input">
-                        <input list="Options" placeholder="Select an option">
-                        <datalist id="Options">
-                            <option value="Student">
-                            <option value="Full Time Job">
-                            <option value="Full Time Learner">
-                            <option value="Prefer nor to say">
-                            <option value="Other">
-                        </datalist> 
+                        <select id="dropdow" class="dropdown" name="currentRole">
+                            <option disabled selected>Select an options</option>
+                            <option value="student">Student</option>
+                            <option value="job">Full Time Job</option>
+                            <option value="learner">Full Time Learner</option>
+                            <option value="nottosay">Prefer not to sayr</option>
+                            <option value="other">Other</option>
+                          </select>
                     </div>
                 </div>
+                  <!-- Radio buttons  1-->
+                <div id="input-box">
+                    <div id="labels">
+                        <label for="checkbox-recommend">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+                    </div>
+                    <div id="input" class="radio-box">
+                        <input id="definitely" type="radio" name="checked" value="definitely">
+                        <label for="definitely">Definitely</label>
+                        <input id="maybe" type="radio" name="checked" value="maybe">
+                        <label for="maybe">Maybe</label>
+                        <input id="notsure" type="radio" name="checked" value="not sure">
+                        <label for="notsure">Not sure</label>
+                    </fieldset>
+                    </div>
+                </div>
+                <!-- Dropdown Opinion 2 -->
+                <div id="input-box">
+                    <div id="labels">
+                        <label for="fcc">What do you like most in FCC:</label>
+                    </div>
+                    <div id="input">
+                        <select id="fcc" class="fcc" name="currentRole">
+                            <option disabled selected>Select an options</option>
+                            <option value="challenges">Challenges</option>
+                            <option value="projects">Projects</option>
+                            <option value="community">Community</option>
+                            <option value="open source">Open Source</option>
+                            </select>
+                    </div>
+                </div>
+                <!-- Checkbox fileds -->
+                <div id="input-box">
+                        <div id="labels">
+                            <label for="improving">Things that should be improved in the future <br> (Check all that apply):</label>
+                        </div>
+                        <div id="input" class="check-box">
+                            <div id="improving">
+                                <input type="checkbox" id="front" name="feature"  value="front-end" />
+                                <label for="front">Front-end Projects</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="back" name="feature"  value="back-end" />
+                                <label for="back">Back-end Projects</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="data" name="feature"  value="data-visualization" />
+                                <label for="data">Data Visualization</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="challenges" name="feature"  value="challenges" />
+                                <label for="challenges">Challenges</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="open-source" name="feature"  value="open-source" />
+                                <label for="open-source">Open Source Community</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="gitter" name="feature"  value="Gitter-help-rooms" />
+                                <label for="gitter">Gitter help rooms</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="videos" name="feature"  value="videos" />
+                                <label for="videos">Videos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="meetups" name="feature"  value="city-meetups" />
+                                <label for="meetups">City Meetups</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="wiki" name="feature"  value="wiki" />
+                                <label for="wiki">Wiki</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="forum" name="feature"  value="forum" />
+                                <label for="forum">Forum</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="courses" name="feature"  value="add-courses" />
+                                <label for="courses">Additional Courses</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TEXTAREA -->
+                    <div id="input-box">
+                        <div id="labels">
+                            <label for="textarea">Any Comments or Suggestions?</label>
+                        </div>
+                        <div id="input">
+                            <textarea rows="4" cols="40" id="textarea"></textarea>
+                        </div>
+                    </div>
+                    <!-- Button -->
+                    <button id="submit" type="submit">Submit</button>
             <!-- form inner END -->
-            </div>
+            </form>
         <!-- form outer END -->
         </div>
     </main>
